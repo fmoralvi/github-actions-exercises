@@ -1,4 +1,5 @@
-name: Python application
+name: Python-syntax-checker
+# description: "Run flake8 to find syntax errors in a Python repo"
 
 on: [push]
 
