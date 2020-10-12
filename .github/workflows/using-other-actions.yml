@@ -8,10 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out the code
+    - name: Check out data repo
       uses: actions/checkout@v2
-    - name: Covid19 Data Repo
-      uses: silverstone1903/covid19@master
+      with:
+        repository: silverstone1903/covid19
+        path: data
     - name: Check directory
-      run: ls
+      run: ls data
       
