@@ -31,4 +31,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run a two-lines script Windows
-        run:  "Get-ChilItem Env : | Sort-Object Name"
+        run:  "Get-ChildItem Env : | Sort-Object Name"
