@@ -1,0 +1,17 @@
+name: using-other-actions
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out the code
+      uses: actions/checkout@v2
+    - name: Covid19 Data Repo
+      uses: silverstone1903/covid19@master
+    - name: Check directory
+      run: ls
+      
