@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Step One
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
 
       - name: Run a one-line script Ubuntu Step Two
         run: |
@@ -28,7 +28,7 @@ jobs:
       
     steps:
       - name: Step Two Windows
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
 
       - name: Run a two-lines script Windows
         run:  "Get-ChilItem Env : | Sort-Object Name"
