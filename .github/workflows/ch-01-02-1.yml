@@ -8,10 +8,18 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Step one
+              run: |
+                  echo Step One
             - name: Step two
+              run: |
+                  echo Step Two
     job2:
         name: Second Job
         runs-on: windows-latest
         steps:
             - name: Step one
+              run: |
+                  echo Step one windows
             - name: Step two
+              run: |
+                  echo Step two windows
