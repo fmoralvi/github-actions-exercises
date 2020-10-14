@@ -13,6 +13,7 @@ jobs:
       with:
         repository: silverstone1903/covid19
         path: data
+        ref: master
     - name: Check directory
       run: ls data
       
