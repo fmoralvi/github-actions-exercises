@@ -21,8 +21,8 @@ jobs:
 
     - name: Copy files into directory
       run: |
-      cp -v Ch03/03_06/hello-server.go  ./hello-server.go 
-      cp -v Ch03/03_06/test.sh  ./test.sh
+        cp -v Ch03/03_06/hello-server.go  ./hello-server.go 
+        cp -v Ch03/03_06/test.sh  ./test.sh
 
     - name: Build ${{ env.FILE_NAME }} for ubuntu-latest
       run: go build ${{ env.FILE_NAME }}.go
