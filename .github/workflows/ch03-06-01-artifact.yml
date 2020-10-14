@@ -20,9 +20,7 @@ jobs:
           ls -ltr
 
     - name: Copy files into directory
-      run: |
-        cp -v Ch03/03_06/hello-server.go  ./hello-server.go 
-        cp -v Ch03/03_06/test.sh  ./test.sh
+      run: cp -v Ch03/03_06/hello-server.go  ./hello-server.go 
 
     - name: Build ${{ env.FILE_NAME }} for ubuntu-latest
       run: go build ${{ env.FILE_NAME }}.go
@@ -49,7 +47,10 @@ jobs:
     steps:
 
     - name: Check out code
-      uses: actions/checkout@v1
+      uses: actions/checkout@v2
+
+    - name: Copy files into directory for testing linux
+      run: cp -v Ch03/03_06/test.sh  ./test.sh
 
     - name: Download artifact
       uses: actions/download-artifact@v1.0.0
@@ -66,7 +67,7 @@ jobs:
     steps:
 
     - name: Check out code
-      uses: actions/checkout@v1
+      uses: actions/checkout@v2
 
     - name: Download artifact
       uses: actions/download-artifact@v1.0.0
