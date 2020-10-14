@@ -13,6 +13,11 @@ jobs:
 
     - name: Check out code
       uses: actions/checkout@v1
+    
+
+    - name: List project files
+      run: |
+          ls -ltr
 
     - name: Copy files into directory
       run: cp -v Ch03/03_06/hello-server.go  ./home/runner/go/src/hello-server.go 
