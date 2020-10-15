@@ -9,11 +9,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    # - name: Copy repo files into yaml directory
-      # run: cp -r Ch04/04_01/ ./
+
 
     - name: change directory
-      run: cd Ch04/04_01
+      run: cd Ch04/04_01/
+
+    - name: check files
+      run: ls
 
     - name: Setup Python environment
       uses: actions/setup-python@v1.1.1
