@@ -3,16 +3,19 @@ name: ch04-02-01-Pipeline
 on: [push]
 env:
   APPLICATION_NAME: app2
+
+defaults:
+  run:
+    working-directory: Ch04/04_01
+
 jobs:
   lint:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
 
-
-
-    - name: change directory
-      run: cd Ch04/04_01/
+    # - name: change directory
+      # run: cd Ch04/04_01/
 
     - name: check files
       run: ls
