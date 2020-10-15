@@ -1,4 +1,4 @@
-name: Pipeline
+name: ch04-02-01-Pipeline
 
 on: [push]
 env:
@@ -9,11 +9,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Copy repo files into yaml directory
-      run: cp -r Ch04/04_01/ ./
+    # - name: Copy repo files into yaml directory
+      # run: cp -r Ch04/04_01/ ./
 
-    - name: check files
-      run: ls
+    - name: change directory
+      run: cd Ch04/04_01
 
     - name: Setup Python environment
       uses: actions/setup-python@v1.1.1
